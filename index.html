@@ -143,6 +143,22 @@ h1,h2,h3{text-wrap:balance}
 .access b{color:var(--ink)}
 .copied{font-size:14px;color:var(--accent);font-weight:700}
 
+/* Political Action Team sign-up: in the side column when it sits beside the list, after the list when the columns stack */
+.side-dyn{display:flex;flex-direction:column;gap:16px}
+.side-dyn:empty{display:none}
+.pat{background:var(--surface);border:1px solid var(--rule);border-top:4px solid var(--ink);border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:10px}
+@media (min-width:700px){.pat{padding:18px}}
+.pat .eyebrow{color:var(--accent)}
+.pat h2{margin:0;font-size:20px;line-height:1.2;font-weight:800}
+.pat p{margin:0;font-size:15px}
+.pat .meet{color:var(--muted)}
+.pat .meet b{color:var(--ink)}
+.pat .btn{align-self:stretch;min-height:48px;font-size:16px;text-align:center;padding:10px 16px;line-height:1.3}
+.pat-narrow{margin-top:12px}
+.pat-wide{display:none}
+@media (min-width:932px){.pat-wide{display:flex}.pat-narrow{display:none}}
+.intro-link{font-weight:700}
+
 .empty,.loading{border:1.5px dashed var(--chip);border-radius:12px;padding:20px;color:var(--muted);background:var(--surface)}
 .empty p,.loading p{margin:0 0 10px}
 .empty p:last-child,.loading p:last-child{margin-bottom:0}
@@ -182,15 +198,32 @@ footer b{color:var(--ink)}
     <p class="eyebrow">Upcoming events</p>
     <h1>Take action with Local 1600</h1>
     <p>Canvasses, lobby days, meetings, rallies and election day work open to every member. Pick one and sign up.</p>
+    <p>Want to help plan this work? <a class="intro-link" href="https://docs.google.com/forms/d/e/1FAIpQLSdV8p4JlGvwwPzVDGgUMiJdJDWt-arcROixBhE1CwjaUoJcgA/viewform" target="_blank" rel="noopener">Join the Political Action Team</a>.</p>
   </div>
   <div class="cols">
-    <div class="side" id="side"></div>
+    <div class="side">
+      <div class="side-dyn" id="side"></div>
+      <section class="pat pat-wide" aria-labelledby="pat-h1">
+        <p class="eyebrow">Political Action Team</p>
+        <h2 id="pat-h1">Join the Political Action Team</h2>
+        <p>Members who plan the union's political work: talking with elected officials, holding officeholders accountable and organizing the actions on this page. No political experience needed.</p>
+        <p class="meet"><b>Meets monthly in person:</b> last Thursday of the month, 6:00 PM, at the union office, 1901 W Carroll Ave, Suite 200, Chicago.</p>
+        <a class="btn dark" href="https://docs.google.com/forms/d/e/1FAIpQLSdV8p4JlGvwwPzVDGgUMiJdJDWt-arcROixBhE1CwjaUoJcgA/viewform" target="_blank" rel="noopener">Join the Political Action Team</a>
+      </section>
+    </div>
     <section class="feed" aria-labelledby="all-h">
       <div class="feed-head">
         <h2 id="all-h">All upcoming events</h2>
         <span class="count" id="count" aria-live="polite"></span>
       </div>
       <div id="list"><div class="loading"><p>Loading events…</p></div></div>
+      <section class="pat pat-narrow" aria-labelledby="pat-h2">
+        <p class="eyebrow">Political Action Team</p>
+        <h2 id="pat-h2">Join the Political Action Team</h2>
+        <p>Members who plan the union's political work: talking with elected officials, holding officeholders accountable and organizing the actions on this page. No political experience needed.</p>
+        <p class="meet"><b>Meets monthly in person:</b> last Thursday of the month, 6:00 PM, at the union office, 1901 W Carroll Ave, Suite 200, Chicago.</p>
+        <a class="btn dark" href="https://docs.google.com/forms/d/e/1FAIpQLSdV8p4JlGvwwPzVDGgUMiJdJDWt-arcROixBhE1CwjaUoJcgA/viewform" target="_blank" rel="noopener">Join the Political Action Team</a>
+      </section>
     </section>
   </div>
   <noscript><div class="empty"><p>This page needs JavaScript to show events. For upcoming political action events, email <b>tswanson@ccctu.org</b>.</p></div></noscript>
