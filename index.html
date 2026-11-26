@@ -1,0 +1,583 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Political Action Events · CCCTU Local 1600</title>
+<meta name="description" content="Upcoming political action events for members of the Cook County College Teachers Union, AFT-IFT Local 1600: canvasses, lobby days, meetings, rallies and election day work.">
+<link rel="icon" href="ccctu-seal.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* Same look as the Legislative Dashboard: warm-gray ground, white cards, near-black ink, one red accent. Phone first. */
+:root{
+  --ground:#F4F3F2; --surface:#FFFFFF; --ink:#17171A; --muted:#5E5A58; --rule:#E2DFDD; --chip:#CFCBC8;
+  --accent:#B3121F; --accent-soft:#FBEAEB;
+  --font:"Public Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--ground);color:var(--ink);font:16px/1.5 var(--font);-webkit-text-size-adjust:100%}
+a{color:var(--ink);text-decoration-color:var(--accent);text-underline-offset:3px}
+a:hover{color:var(--accent)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+button{font:inherit;color:inherit;cursor:pointer}
+.wrap{max-width:1200px;margin:0 auto;padding:0 16px}
+@media (min-width:700px){.wrap{padding:0 24px}}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:8px;top:-60px;background:var(--surface);padding:10px 14px;border:2px solid var(--accent);border-radius:8px;z-index:10;font-weight:700}
+.skip:focus{top:8px}
+
+.notice{background:var(--ink);color:#fff;font-size:14px;line-height:1.45}
+.notice .wrap{padding-top:10px;padding-bottom:10px}
+@media (min-width:700px){.notice .wrap{text-align:center}}
+
+header.mast{background:var(--surface);border-bottom:3px solid var(--accent)}
+.mast-top{padding-top:14px;padding-bottom:10px}
+.brand{display:inline-flex;align-items:center;gap:12px;text-decoration:none}
+.brand img{width:56px;height:56px;flex:none;display:block}
+@media (min-width:700px){.brand img{width:78px;height:78px}}
+.brand small{display:block;font-size:13px;font-weight:600;color:var(--muted);letter-spacing:.02em;line-height:1.35}
+.brand strong{display:block;font-size:26px;line-height:1.1;font-weight:800;letter-spacing:-.01em}
+@media (min-width:700px){.brand strong{font-size:34px}.brand small{font-size:14px}}
+.navrow{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:0 24px;border-top:1px solid var(--rule)}
+nav.primary{display:flex;gap:0 26px}
+nav.primary a{min-height:48px;display:inline-flex;align-items:center;font-weight:800;font-size:17px;text-decoration:none;box-shadow:inset 0 -4px 0 transparent;white-space:nowrap}
+nav.primary a[aria-current="page"]{box-shadow:inset 0 -4px 0 var(--accent);color:var(--ink)}
+nav.primary a:hover{box-shadow:inset 0 -4px 0 var(--chip)}
+nav.primary a[aria-current="page"]:hover{box-shadow:inset 0 -4px 0 var(--accent)}
+nav.secondary{display:flex;gap:0 18px;font-size:14px}
+nav.secondary a{min-height:40px;display:inline-flex;align-items:center;font-weight:600;color:var(--muted);text-decoration:none}
+nav.secondary a:hover{color:var(--accent)}
+@media (max-width:699px){nav.primary{justify-content:space-between;width:100%;gap:0 10px}nav.primary a{font-size:15px}nav.secondary{display:none}}
+@media (min-width:700px){.phone-only{display:none!important}}
+
+main.wrap{padding-top:18px;padding-bottom:32px}
+@media (min-width:700px){main.wrap{padding-top:26px;padding-bottom:40px}}
+.eyebrow{font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:0}
+h1,h2,h3{text-wrap:balance}
+.topic-head{display:flex;flex-direction:column;gap:6px;margin-bottom:18px}
+.topic-head h1{margin:0;font-size:30px;line-height:1.1;font-weight:800;letter-spacing:-.01em}
+@media (min-width:700px){.topic-head h1{font-size:36px}}
+.topic-head p{margin:0;max-width:65ch}
+
+.cols{display:flex;flex-wrap:wrap;gap:22px 24px;align-items:flex-start}
+.side{flex:1 1 300px;min-width:0;display:flex;flex-direction:column;gap:16px}
+.feed{flex:999 1 560px;min-width:0;display:flex;flex-direction:column;gap:12px}
+
+/* next up */
+.nextup{background:var(--surface);border:2px solid var(--accent);box-shadow:0 0 0 4px var(--accent-soft);border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:12px}
+@media (min-width:700px){.nextup{padding:18px}}
+.nextup .label{display:flex;align-items:center;gap:10px;margin:0;font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+.dot{width:10px;height:10px;border-radius:50%;background:var(--accent);flex:none}
+.nextup h3{margin:0;font-size:20px;line-height:1.2;font-weight:800}
+.whenwhere{font-size:15px;color:var(--muted);display:flex;flex-direction:column;gap:2px;margin:0}
+.whenwhere b{color:var(--ink);font-weight:700}
+
+/* shared bits */
+.datebox{width:58px;flex:none;border-radius:8px;background:var(--ground);text-align:center;padding:8px 0;align-self:flex-start;line-height:1.2}
+.datebox .m{display:block;font-size:12px;font-weight:800;color:var(--accent);letter-spacing:.04em}
+.datebox .d{display:block;font-size:24px;font-weight:800;line-height:1.05}
+.datebox .w{display:block;font-size:12px;font-weight:600;color:var(--muted)}
+.headrow{display:flex;gap:14px;align-items:flex-start}
+.headtext{display:flex;flex-direction:column;gap:6px;align-items:flex-start;min-width:0}
+.kind{font-size:12px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;padding:3px 8px;border-radius:4px;border:1.5px solid var(--ink);line-height:1.3}
+.status{font-size:13px;font-weight:700;border-radius:999px;padding:2px 10px;background:var(--ink);color:#fff;line-height:1.4}
+.tags{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.btn{min-height:44px;padding:0 16px;border-radius:8px;display:inline-flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;text-decoration:none;border:1.5px solid var(--ink);background:var(--surface);color:var(--ink)}
+.btn:hover{border-color:var(--accent);color:var(--accent)}
+.btn.dark{background:var(--ink);color:#fff}
+.btn.dark:hover{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn.red{background:var(--accent);border-color:var(--accent);color:#fff;min-height:52px;font-size:17px;font-weight:800}
+.btn.red:hover{background:#8F0E19;border-color:#8F0E19;color:#fff}
+.actions{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.nextup .actions .btn{flex:1 1 140px}
+.nextup .btn.red{flex:1 1 100%}
+.contactline{margin:0;font-size:15px;background:var(--ground);border-radius:8px;padding:10px 12px}
+.contactline .email{font-weight:700;user-select:all;-webkit-user-select:all;overflow-wrap:anywhere}
+.linkbtn{min-height:44px;display:inline-flex;align-items:center;font-weight:700;background:none;border:0;padding:0 2px;text-decoration:underline;text-decoration-color:var(--accent);text-underline-offset:3px}
+.linkbtn:hover{color:var(--accent)}
+.linkbtn .arr{margin-left:6px;color:var(--accent);display:inline-block;transition:transform .15s}
+.linkbtn[aria-expanded="true"] .arr{transform:rotate(90deg)}
+
+/* filters */
+.filters{background:var(--surface);border:1px solid var(--rule);border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:10px}
+.filters h2{margin:0;font-size:15px;font-weight:800}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+@media (max-width:699px){
+  .filters{background:none;border:0;padding:0}
+  .chips{flex-wrap:nowrap;overflow-x:auto;margin:0 -16px;padding:2px 16px 4px;scrollbar-width:none}
+  .chips::-webkit-scrollbar{display:none}
+}
+.chip{flex:none;min-height:44px;padding:0 16px;border-radius:999px;font-size:15px;font-weight:700;white-space:nowrap;background:var(--surface);border:1.5px solid var(--chip)}
+.chip:hover{border-color:var(--ink)}
+.chip[aria-pressed="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.chip .n{font-weight:500;opacity:.75;margin-left:4px}
+
+/* feed */
+.feed-head{display:flex;align-items:baseline;justify-content:space-between;gap:6px 12px;flex-wrap:wrap}
+.feed-head h2{margin:0;font-size:22px;line-height:1.2;font-weight:800}
+.count{font-size:14px;color:var(--muted)}
+.group-h{font-size:15px;font-weight:800;margin:14px 0 0;letter-spacing:.01em}
+.group-h:first-of-type{margin-top:2px}
+.item{background:var(--surface);border:1px solid var(--rule);border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:10px;scroll-margin-top:16px}
+@media (min-width:700px){.item{padding:18px 20px}}
+.item.hit{border:2px solid var(--accent);box-shadow:0 0 0 4px var(--accent-soft)}
+.item h3{margin:0;font-size:18px;line-height:1.3;font-weight:800}
+@media (min-width:700px){.item h3{font-size:19px}}
+.item .meta{font-size:14px;color:var(--muted);margin:0}
+.item.is-off h3{color:var(--muted)}
+.more{border-top:1px solid var(--rule);padding-top:12px;display:flex;flex-direction:column;gap:12px}
+.more[hidden]{display:none}
+.facts{margin:0;display:grid;grid-template-columns:6.5em 1fr;gap:6px 12px;font-size:15px}
+.facts dt{font-weight:700;color:var(--muted);font-size:13px;text-transform:uppercase;letter-spacing:.04em;padding-top:2px}
+.facts dd{margin:0;overflow-wrap:anywhere}
+@media (max-width:420px){.facts{grid-template-columns:1fr;gap:2px}.facts dd{margin-bottom:6px}}
+.notes p{margin:0 0 8px;max-width:68ch}
+.notes p:last-child{margin-bottom:0}
+.subhead{margin:0;font-size:14px;font-weight:800}
+.calrow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.calrow .btn{padding:0 8px}
+.access{font-size:14px;color:var(--muted);margin:0}
+.access b{color:var(--ink)}
+.copied{font-size:14px;color:var(--accent);font-weight:700}
+
+.empty,.loading{border:1.5px dashed var(--chip);border-radius:12px;padding:20px;color:var(--muted);background:var(--surface)}
+.empty p,.loading p{margin:0 0 10px}
+.empty p:last-child,.loading p:last-child{margin-bottom:0}
+
+footer{border-top:1px solid var(--rule);background:var(--surface)}
+footer .wrap{padding-top:16px;padding-bottom:20px;font-size:14px;color:var(--muted);display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
+footer b{color:var(--ink)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#app">Skip to events</a>
+<section class="notice" aria-label="Notice"><div class="wrap">Political work happens on your own time. Please sign up with personal email and devices, not college accounts.</div></section>
+<header class="mast">
+  <div class="wrap mast-top">
+    <a class="brand" href="./">
+      <img src="ccctu-seal.png" alt="Cook County College Teachers Union, AFT Local 1600, AFL-CIO seal" width="78" height="78">
+      <span><small>Cook County College Teachers Union · AFT-IFT Local 1600</small><strong>Political Action</strong></span>
+    </a>
+  </div>
+  <div class="wrap">
+    <div class="navrow">
+      <nav class="primary" aria-label="Sections">
+        <a href="./" aria-current="page">Events</a>
+        <a href="https://troyaswanson.github.io/Legdashboard/">Legislative Dashboard</a>
+        <a href="https://ccctu.org/" class="phone-only">Union home</a>
+      </nav>
+      <nav class="secondary" aria-label="More pages">
+        <a href="https://ccctu.org/">Union homepage</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main class="wrap" id="app" tabindex="-1">
+  <div class="topic-head">
+    <p class="eyebrow">Upcoming events</p>
+    <h1>Take action with Local 1600</h1>
+    <p>Canvasses, lobby days, meetings, rallies and election day work open to every member. Pick one and sign up.</p>
+  </div>
+  <div class="cols">
+    <div class="side" id="side"></div>
+    <section class="feed" aria-labelledby="all-h">
+      <div class="feed-head">
+        <h2 id="all-h">All upcoming events</h2>
+        <span class="count" id="count" aria-live="polite"></span>
+      </div>
+      <div id="list"><div class="loading"><p>Loading events…</p></div></div>
+    </section>
+  </div>
+  <noscript><div class="empty"><p>This page needs JavaScript to show events. For upcoming political action events, email <b>tswanson@ccctu.org</b>.</p></div></noscript>
+</main>
+
+<footer><div class="wrap">
+  <span><b>Need an accommodation?</b> Contact the organizer listed on any event and we'll work with you.</span>
+  <span>Questions? Email <a href="mailto:tswanson@ccctu.org">tswanson@ccctu.org</a> · <a href="https://ccctu.org/">CCCTU homepage</a></span>
+</div></footer>
+
+<script>
+(function () {
+  'use strict';
+
+  // ---- Settings -------------------------------------------------------
+  // The published CSV link for the Events tab of the "Political Events" Google Sheet.
+  var CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vT84oyhGPDx0IHQ5HKyfE73J-HWc1sD15CfnSeCpwvd7Pl1kNd7ciAQ2AxP19I5VwPrimQ8fHyFTd2Y/pub?gid=0&single=true&output=csv';
+  var FALLBACK_EMAIL = 'tswanson@ccctu.org';
+  var TZ = 'America/Chicago';
+  var TYPES = ['Canvass', 'Election Day', 'Lobby Day', 'Meeting', 'Organizing', 'Rally/Action', 'Other'];
+
+  // For testing only: ?csv=<url> reads a different CSV.
+  var params = new URLSearchParams(location.search);
+  if (params.get('csv')) CSV_URL = params.get('csv');
+  var NOW = params.get('now') ? new Date(params.get('now')) : new Date();
+
+  var $ = function (id) { return document.getElementById(id); };
+  var state = { events: [], filter: 'All' };
+
+  // ---- CSV ------------------------------------------------------------
+  function parseCSV(text) {
+    var rows = [], row = [], field = '', i = 0, q = false, c;
+    text = text.replace(/^\uFEFF/, '');
+    while (i < text.length) {
+      c = text[i];
+      if (q) {
+        if (c === '"') { if (text[i + 1] === '"') { field += '"'; i++; } else q = false; }
+        else field += c;
+      } else if (c === '"') q = true;
+      else if (c === ',') { row.push(field); field = ''; }
+      else if (c === '\n' || c === '\r') {
+        if (c === '\r' && text[i + 1] === '\n') i++;
+        row.push(field); rows.push(row); row = []; field = '';
+      } else field += c;
+      i++;
+    }
+    if (field !== '' || row.length) { row.push(field); rows.push(row); }
+    return rows;
+  }
+  function norm(s) { return String(s || '').toLowerCase().replace(/[^a-z0-9]+/g, ''); }
+  var FIELDS = {
+    publish: ['publish'], title: ['title'], type: ['type'], date: ['date'],
+    start: ['starttime', 'start'], end: ['endtime', 'end'],
+    locname: ['locationname', 'location'], address: ['address'],
+    link: ['signuplink', 'link'], label: ['signuplabel', 'label'],
+    contact: ['contactname', 'contact'], email: ['contactemail', 'email'],
+    notes: ['notes'], check: ['check']
+  };
+  function mapHeaders(head) {
+    var idx = {}, h = head.map(norm);
+    Object.keys(FIELDS).forEach(function (k) {
+      for (var j = 0; j < FIELDS[k].length; j++) {
+        var at = h.indexOf(FIELDS[k][j]);
+        if (at > -1) { idx[k] = at; break; }
+      }
+    });
+    return idx;
+  }
+  function clean(s) { return String(s == null ? '' : s).replace(/\s+/g, ' ').trim(); }
+
+  // ---- Dates and times (all in Central time) --------------------------
+  var MONTHS = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'];
+  function parseDate(s) {
+    s = clean(s); if (!s) return null;
+    var m;
+    if ((m = s.match(/^(\d{4})-(\d{1,2})-(\d{1,2})/))) return { y: +m[1], mo: +m[2], d: +m[3] };
+    if ((m = s.match(/^(\d{1,2})\/(\d{1,2})\/(\d{2,4})$/))) return { y: m[3].length === 2 ? 2000 + +m[3] : +m[3], mo: +m[1], d: +m[2] };
+    if ((m = s.match(/([A-Za-z]{3,})\.?\s+(\d{1,2}),?\s+(\d{4})/))) {
+      var mi = MONTHS.indexOf(m[1].slice(0, 3).toLowerCase());
+      if (mi > -1) return { y: +m[3], mo: mi + 1, d: +m[2] };
+    }
+    if ((m = s.match(/(\d{1,2})\s+([A-Za-z]{3,})\.?,?\s+(\d{4})/))) {
+      var mj = MONTHS.indexOf(m[2].slice(0, 3).toLowerCase());
+      if (mj > -1) return { y: +m[3], mo: mj + 1, d: +m[1] };
+    }
+    return null;
+  }
+  function parseTime(s) {
+    s = clean(s).toLowerCase().replace(/\./g, ''); if (!s) return null;
+    if (s === 'noon') return { h: 12, mi: 0 };
+    var m = s.match(/^(\d{1,2})(?::(\d{2}))?(?::\d{2})?\s*(am|pm|a|p)?$/);
+    if (!m) return null;
+    var h = +m[1], mi = +(m[2] || 0), ap = m[3];
+    if (ap) { if (ap[0] === 'p' && h < 12) h += 12; if (ap[0] === 'a' && h === 12) h = 0; }
+    if (h > 23 || mi > 59) return null;
+    return { h: h, mi: mi };
+  }
+  // Convert a Central wall-clock time to a real moment.
+  var tzFmt = new Intl.DateTimeFormat('en-US', { timeZone: TZ, hourCycle: 'h23', year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' });
+  function tzOffsetMs(utcMs) {
+    var p = {}; tzFmt.formatToParts(new Date(utcMs)).forEach(function (x) { p[x.type] = x.value; });
+    return Date.UTC(+p.year, +p.month - 1, +p.day, +p.hour % 24, +p.minute, +p.second) - utcMs;
+  }
+  function central(y, mo, d, h, mi) {
+    var guess = Date.UTC(y, mo - 1, d, h, mi);
+    var t = guess - tzOffsetMs(guess);
+    return new Date(guess - tzOffsetMs(t));
+  }
+  var DOW = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  var MON = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+  function dow(dt) { return DOW[new Date(Date.UTC(dt.y, dt.mo - 1, dt.d)).getUTCDay()]; }
+  function fmtTime(t) {
+    var h = t.h % 12 || 12, ap = t.h < 12 ? 'AM' : 'PM';
+    return h + (t.mi ? ':' + String(t.mi).padStart(2, '0') : ':00') + ' ' + ap;
+  }
+  function timeRange(ev) {
+    if (!ev.start) return 'All day';
+    if (!ev.endT) return fmtTime(ev.start);
+    return fmtTime(ev.start) + ' – ' + fmtTime(ev.endT);
+  }
+  function pad(n) { return String(n).padStart(2, '0'); }
+  function ymd(dt) { return dt.y + pad(dt.mo) + pad(dt.d); }
+  function utcStamp(date) { return date.toISOString().replace(/[-:]/g, '').replace(/\.\d{3}/, ''); }
+
+  // ---- Types and status ----------------------------------------------
+  function typeOf(s) {
+    var t = clean(s).toLowerCase();
+    if (!t) return '';
+    if (/canvass|labor walk|door/.test(t)) return 'Canvass';
+    if (/election/.test(t)) return 'Election Day';
+    if (/lobby/.test(t)) return 'Lobby Day';
+    if (/meeting/.test(t)) return 'Meeting';
+    if (/organiz|union work|outreach/.test(t)) return 'Organizing';
+    if (/rally|action|hearing|press|protest|march/.test(t)) return 'Rally/Action';
+    return 'Other';
+  }
+  function statusOf(title) {
+    var m = title.match(/^\s*(cancell?ed|postponed)\s*[:\-–—]?\s*/i);
+    if (!m) return { status: '', title: title };
+    return { status: /post/i.test(m[1]) ? 'Postponed' : 'Cancelled', title: title.slice(m[0].length) || title };
+  }
+  function slug(ev) {
+    return ev.date.y + '-' + pad(ev.date.mo) + '-' + pad(ev.date.d) + '-' +
+      ev.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 50);
+  }
+
+  // ---- Build events from rows -----------------------------------------
+  function buildEvents(rows) {
+    var head = rows.shift() || [], ix = mapHeaders(head), out = [], seen = {};
+    function get(r, k) { return ix[k] == null ? '' : clean(r[ix[k]]); }
+    rows.forEach(function (r) {
+      if (!/^(true|yes|y|x|1|✓)$/i.test(get(r, 'publish'))) return;
+      var rawTitle = get(r, 'title'), date = parseDate(get(r, 'date'));
+      if (!rawTitle || !date) return;
+      var st = statusOf(rawTitle);
+      var start = parseTime(get(r, 'start')), endT = parseTime(get(r, 'end'));
+      var ev = {
+        title: st.title, status: st.status, typeRaw: get(r, 'type'), type: typeOf(get(r, 'type')),
+        date: date, start: start, endT: endT,
+        locname: get(r, 'locname'), address: get(r, 'address'),
+        link: get(r, 'link'), label: get(r, 'label'),
+        contact: get(r, 'contact'), email: get(r, 'email'),
+        notes: ix.notes == null ? '' : String(r[ix.notes] || '').trim()
+      };
+      if (ev.link && !/^https?:\/\//i.test(ev.link)) ev.link = /\./.test(ev.link) ? 'https://' + ev.link : '';
+      ev.startAt = start ? central(date.y, date.mo, date.d, start.h, start.mi) : central(date.y, date.mo, date.d, 0, 0);
+      if (start && endT) {
+        ev.endAt = central(date.y, date.mo, date.d, endT.h, endT.mi);
+        if (ev.endAt <= ev.startAt) ev.endAt = new Date(ev.startAt.getTime() + 60 * 60 * 1000);
+      } else if (start) ev.endAt = new Date(ev.startAt.getTime() + 60 * 60 * 1000);
+      ev.dropAt = (start && endT) ? ev.endAt : central(date.y, date.mo, date.d, 23, 59);
+      if (ev.dropAt < NOW) return;
+      var id = slug(ev), n = 2;
+      while (seen[id]) id = slug(ev) + '-' + n++;
+      seen[id] = true; ev.id = id;
+      out.push(ev);
+    });
+    out.sort(function (a, b) { return a.startAt - b.startAt; });
+    return out;
+  }
+
+  // ---- Small HTML helpers ---------------------------------------------
+  function esc(s) { return String(s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
+  function linkify(s) {
+    return esc(s).replace(/\bhttps?:\/\/[^\s<]+[^\s<.,;:!?)\]'"]/g, function (u) {
+      return '<a href="' + u + '" target="_blank" rel="noopener">' + u + '</a>';
+    });
+  }
+  function place(ev) { return [ev.locname, ev.address].filter(Boolean).join(', '); }
+  function longDate(ev) { return dow(ev.date) + ', ' + MON[ev.date.mo - 1] + ' ' + ev.date.d + ', ' + ev.date.y; }
+  function dateBox(ev) {
+    return '<div class="datebox" aria-hidden="true"><span class="m">' + MON[ev.date.mo - 1].slice(0, 3).toUpperCase() +
+      '</span><span class="d">' + ev.date.d + '</span><span class="w">' + dow(ev.date).slice(0, 3).toUpperCase() + '</span></div>';
+  }
+  function tags(ev) {
+    var h = '';
+    if (ev.type) h += '<span class="kind">' + esc(ev.type) + '</span>';
+    if (ev.status) h += '<span class="status">' + ev.status + '</span>';
+    return h ? '<div class="tags">' + h + '</div>' : '';
+  }
+  function signup(ev, big) {
+    if (ev.status === 'Cancelled') return '';
+    if (ev.link) {
+      var label = ev.label || 'Sign up';
+      return '<a class="btn ' + (big ? 'red' : 'dark') + '" href="' + esc(ev.link) + '" target="_blank" rel="noopener" aria-label="' +
+        esc(label + ': ' + ev.title + ', ' + MON[ev.date.mo - 1] + ' ' + ev.date.d) + '">' + esc(label) + '</a>';
+    }
+    if (ev.email) {
+      return '<p class="contactline">To sign up, contact ' + (ev.contact ? '<b>' + esc(ev.contact) + '</b>: ' : '') +
+        '<span class="email">' + esc(ev.email) + '</span></p>';
+    }
+    return '';
+  }
+
+  // ---- Calendar links --------------------------------------------------
+  function calText(ev) {
+    var d = [];
+    if (ev.notes) d.push(ev.notes);
+    if (ev.link) d.push('Sign up: ' + ev.link);
+    else if (ev.email) d.push('To sign up, contact ' + (ev.contact ? ev.contact + ': ' : '') + ev.email);
+    d.push('Details: ' + location.origin + location.pathname + '#' + ev.id);
+    return d.join('\n\n');
+  }
+  function googleUrl(ev) {
+    var dates;
+    if (ev.start) dates = utcStamp(ev.startAt) + '/' + utcStamp(ev.endAt);
+    else { var n = new Date(Date.UTC(ev.date.y, ev.date.mo - 1, ev.date.d + 1)); dates = ymd(ev.date) + '/' + n.getUTCFullYear() + pad(n.getUTCMonth() + 1) + pad(n.getUTCDate()); }
+    return 'https://calendar.google.com/calendar/render?action=TEMPLATE&text=' + encodeURIComponent(ev.title) +
+      '&dates=' + dates + '&ctz=' + encodeURIComponent(TZ) + '&details=' + encodeURIComponent(calText(ev)) +
+      '&location=' + encodeURIComponent(place(ev));
+  }
+  function outlookUrl(ev) {
+    var u = 'https://outlook.live.com/calendar/0/deeplink/compose?path=%2Fcalendar%2Faction%2Fcompose&rru=addevent' +
+      '&subject=' + encodeURIComponent(ev.title) + '&body=' + encodeURIComponent(calText(ev)) + '&location=' + encodeURIComponent(place(ev));
+    if (ev.start) u += '&startdt=' + encodeURIComponent(ev.startAt.toISOString()) + '&enddt=' + encodeURIComponent(ev.endAt.toISOString());
+    else u += '&allday=true&startdt=' + ev.date.y + '-' + pad(ev.date.mo) + '-' + pad(ev.date.d);
+    return u;
+  }
+  function icsEscape(s) { return String(s).replace(/\\/g, '\\\\').replace(/;/g, '\\;').replace(/,/g, '\\,').replace(/\r?\n/g, '\\n'); }
+  function downloadIcs(ev) {
+    var L = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//CCCTU Local 1600//Political Action Events//EN', 'CALSCALE:GREGORIAN', 'METHOD:PUBLISH', 'BEGIN:VEVENT',
+      'UID:' + ev.id + '@ccctu-political-action', 'DTSTAMP:' + utcStamp(new Date())];
+    if (ev.start) { L.push('DTSTART:' + utcStamp(ev.startAt)); L.push('DTEND:' + utcStamp(ev.endAt)); }
+    else {
+      var n = new Date(Date.UTC(ev.date.y, ev.date.mo - 1, ev.date.d + 1));
+      L.push('DTSTART;VALUE=DATE:' + ymd(ev.date));
+      L.push('DTEND;VALUE=DATE:' + n.getUTCFullYear() + pad(n.getUTCMonth() + 1) + pad(n.getUTCDate()));
+    }
+    L.push('SUMMARY:' + icsEscape(ev.title));
+    if (place(ev)) L.push('LOCATION:' + icsEscape(place(ev)));
+    L.push('DESCRIPTION:' + icsEscape(calText(ev)));
+    L.push('END:VEVENT', 'END:VCALENDAR');
+    var blob = new Blob([L.join('\r\n') + '\r\n'], { type: 'text/calendar;charset=utf-8' });
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(blob); a.download = ev.id + '.ics';
+    document.body.appendChild(a); a.click();
+    setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 1000);
+  }
+
+  // ---- Rendering -------------------------------------------------------
+  function moreBlock(ev, prefix) {
+    var facts = '<dl class="facts"><dt>When</dt><dd><b>' + esc(longDate(ev)) + '</b><br>' + esc(timeRange(ev)) + (ev.start ? ' (Central)' : '') + '</dd>';
+    if (place(ev)) {
+      facts += '<dt>Where</dt><dd>' + (ev.locname ? '<b>' + esc(ev.locname) + '</b>' : '') + (ev.locname && ev.address ? '<br>' : '') + esc(ev.address);
+      if (ev.address) facts += '<br><a href="https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(ev.address) + '" target="_blank" rel="noopener" style="min-height:44px;display:inline-flex;align-items:center;font-weight:700">Open in Maps</a>';
+      facts += '</dd>';
+    }
+    if (ev.contact || ev.email) facts += '<dt>Contact</dt><dd>' + esc(ev.contact) + (ev.contact && ev.email ? '<br>' : '') + (ev.email ? '<span class="email" style="font-weight:600;user-select:all;-webkit-user-select:all">' + esc(ev.email) + '</span>' : '') + '</dd>';
+    facts += '</dl>';
+    var notes = ev.notes ? '<div class="notes">' + ev.notes.split(/\n+/).map(function (p) { return '<p>' + linkify(p) + '</p>'; }).join('') + '</div>' : '';
+    var cal = ev.status === 'Cancelled' ? '' :
+      '<p class="subhead" id="' + prefix + 'cal-' + ev.id + '">Add to your calendar</p><div class="calrow" role="group" aria-labelledby="' + prefix + 'cal-' + ev.id + '">' +
+      '<a class="btn" href="' + esc(googleUrl(ev)) + '" target="_blank" rel="noopener">Google</a>' +
+      '<a class="btn" href="' + esc(outlookUrl(ev)) + '" target="_blank" rel="noopener">Outlook</a>' +
+      '<button class="btn" type="button" data-ics="' + ev.id + '">Apple / .ics</button></div>';
+    return notes + facts + cal +
+      '<p class="access"><b>Need an accommodation?</b> Contact the organizer and we\'ll work with you.</p>' +
+      '<div class="actions"><button class="btn" type="button" data-copy="' + ev.id + '">Copy link to this event</button><span class="copied" aria-live="polite"></span></div>';
+  }
+  function card(ev) {
+    var off = ev.status === 'Cancelled';
+    return '<article class="item' + (off ? ' is-off' : '') + '" id="' + ev.id + '" aria-labelledby="t-' + ev.id + '">' +
+      '<div class="headrow">' + dateBox(ev) + '<div class="headtext">' + tags(ev) +
+      '<h3 id="t-' + ev.id + '">' + esc(ev.title) + '</h3>' +
+      '<p class="meta">' + esc(timeRange(ev)) + (place(ev) ? '<br>' + esc(place(ev)) : '') + '</p></div></div>' +
+      signup(ev, false) +
+      '<div class="actions"><button class="linkbtn" type="button" aria-expanded="false" aria-controls="more-' + ev.id + '" data-toggle="' + ev.id + '">Details<span class="arr" aria-hidden="true">→</span></button></div>' +
+      '<div class="more" id="more-' + ev.id + '" hidden>' + moreBlock(ev, 'l-') + '</div>' +
+      '</article>';
+  }
+  function nextCard(ev) {
+    return '<section class="nextup" aria-labelledby="next-h">' +
+      '<p class="label"><span class="dot" aria-hidden="true"></span><span id="next-h">Next up</span></p>' +
+      '<div class="headrow">' + dateBox(ev) + '<div class="headtext">' + tags(ev) + '<h3>' + esc(ev.title) + '</h3></div></div>' +
+      '<p class="whenwhere"><span><b>When:</b> ' + esc(dow(ev.date).slice(0, 3) + ', ' + MON[ev.date.mo - 1].slice(0, 3) + ' ' + ev.date.d + ' · ' + timeRange(ev)) + '</span>' +
+      (place(ev) ? '<span><b>Where:</b> ' + esc(place(ev)) + '</span>' : '') + '</p>' +
+      signup(ev, true) +
+      '<div class="actions"><a class="btn" href="#' + ev.id + '" data-open="' + ev.id + '">Details and calendar</a></div>' +
+      '</section>';
+  }
+  function counts() {
+    var c = { All: state.events.length };
+    state.events.forEach(function (e) { if (e.type) c[e.type] = (c[e.type] || 0) + 1; });
+    return c;
+  }
+  function renderSide() {
+    var next = state.events.filter(function (e) { return !e.status; })[0];
+    var c = counts();
+    var chips = ['All'].concat(TYPES).map(function (t) {
+      return '<button class="chip" type="button" aria-pressed="' + (state.filter === t) + '" data-filter="' + t + '">' + t +
+        '<span class="n">' + (c[t] || 0) + '</span></button>';
+    }).join('');
+    $('side').innerHTML = (next ? nextCard(next) : '') +
+      '<section class="filters" aria-labelledby="f-h"><h2 id="f-h">Show event types</h2><div class="chips" role="group" aria-labelledby="f-h">' + chips + '</div></section>';
+  }
+  function renderList() {
+    var list = state.events.filter(function (e) { return state.filter === 'All' || e.type === state.filter; });
+    $('count').textContent = list.length === 1 ? '1 event' : list.length + ' events';
+    if (!list.length) {
+      $('list').innerHTML = '<div class="empty"><p>' + (state.events.length ? 'No ' + esc(state.filter) + ' events are scheduled right now. Check back soon.' : 'No events are scheduled right now. Check back soon.') + '</p>' +
+        (state.filter !== 'All' ? '<p><button class="btn" type="button" data-filter="All">Show all events</button></p>' : '') + '</div>';
+      return;
+    }
+    var html = '', last = '';
+    list.forEach(function (e) {
+      var g = MON[e.date.mo - 1] + ' ' + e.date.y;
+      if (g !== last) { html += '<h3 class="group-h">' + g + '</h3>'; last = g; }
+      html += card(e);
+    });
+    $('list').innerHTML = html;
+  }
+  function render() { renderSide(); renderList(); }
+
+  function openEvent(id, focus) {
+    var el = document.getElementById(id);
+    if (!el) {
+      var ev = state.events.filter(function (e) { return e.id === id; })[0];
+      if (ev && state.filter !== 'All' && ev.type !== state.filter) { state.filter = 'All'; render(); el = document.getElementById(id); }
+    }
+    if (!el) return;
+    document.querySelectorAll('.item.hit').forEach(function (x) { x.classList.remove('hit'); });
+    el.classList.add('hit');
+    var btn = el.querySelector('[data-toggle]'), more = document.getElementById('more-' + id);
+    if (btn && more) { btn.setAttribute('aria-expanded', 'true'); more.hidden = false; }
+    el.scrollIntoView({ block: 'start' });
+    if (focus) { var h = el.querySelector('h3'); h.setAttribute('tabindex', '-1'); h.focus({ preventScroll: true }); }
+  }
+
+  document.addEventListener('click', function (e) {
+    var t = e.target.closest('[data-filter],[data-toggle],[data-ics],[data-copy],[data-open]');
+    if (!t) return;
+    if (t.dataset.filter) { state.filter = t.dataset.filter; render(); var b = document.querySelector('.chip[data-filter="' + state.filter + '"]'); if (b) b.focus(); return; }
+    if (t.dataset.toggle) {
+      var more = document.getElementById('more-' + t.dataset.toggle), open = t.getAttribute('aria-expanded') === 'true';
+      t.setAttribute('aria-expanded', String(!open)); more.hidden = open; return;
+    }
+    var ev = state.events.filter(function (x) { return x.id === (t.dataset.ics || t.dataset.copy || t.dataset.open); })[0];
+    if (!ev) return;
+    if (t.dataset.ics) { downloadIcs(ev); return; }
+    if (t.dataset.open) { e.preventDefault(); history.replaceState(null, '', '#' + ev.id); openEvent(ev.id, true); return; }
+    if (t.dataset.copy) {
+      var url = location.origin + location.pathname + '#' + ev.id, note = t.parentNode.querySelector('.copied');
+      var done = function () { note.textContent = 'Link copied'; setTimeout(function () { note.textContent = ''; }, 2500); };
+      if (navigator.clipboard) navigator.clipboard.writeText(url).then(done, function () { prompt('Copy this link:', url); });
+      else prompt('Copy this link:', url);
+    }
+  });
+  window.addEventListener('hashchange', function () { var id = decodeURIComponent(location.hash.slice(1)); if (id) openEvent(id, true); });
+
+  function fail() {
+    $('count').textContent = '';
+    $('side').innerHTML = '';
+    $('list').innerHTML = '<div class="empty"><p>Events can\'t be loaded right now. Please try again in a few minutes.</p>' +
+      '<p>For upcoming political action events, email <b>' + FALLBACK_EMAIL + '</b>.</p></div>';
+  }
+
+  fetch(CSV_URL, { cache: 'no-store' })
+    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.text(); })
+    .then(function (text) {
+      if (/^\s*</.test(text)) throw new Error('not csv');
+      state.events = buildEvents(parseCSV(text));
+      render();
+      var id = decodeURIComponent(location.hash.slice(1));
+      if (id) openEvent(id, false);
+    })
+    .catch(fail);
+})();
+</script>
+</body>
+</html>
